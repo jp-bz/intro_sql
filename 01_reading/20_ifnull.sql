@@ -1,3 +1,5 @@
-SELECT name, surname, IFNULL(age, 0) FROM users; # Reemplaza los valores NULL en la columna age con 0
+SELECT name, surname, IFNULL(age, 0) FROM users; # Select name, surname, and age (replace NULL with 0) from users table
+
+
 
 
