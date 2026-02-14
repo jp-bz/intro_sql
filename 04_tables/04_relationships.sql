@@ -61,5 +61,3 @@ INSERT INTO users_languages(user_id, language_id) VALUES (2, 3);
 INSERT INTO users_languages(user_id, language_id) VALUES (2, 5);
 
 
-
-/* Hola */

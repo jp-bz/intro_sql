@@ -1,0 +1,12 @@
+SELECT * FROM users
+INNER JOIN dni; # Perform an inner join between 'users' and 'dni' tables, returning only matching records based on the foreign key relationship
+
+SELECT * FROM users
+INNER JOIN dni
+ON users.user_id = dni.user_id; # Perform an inner join between 'users' and 'dni' tables, specifying the join condition based on the foreign key relationship
+
+SELECT * FROM users
+INNER JOIN dni
+ON users.user_id = dni.user_id
+ORDER BY age DESC; # Perform an inner join between 'users' and 'dni' tables, specifying the join condition and ordering the results by age in descending order
+
