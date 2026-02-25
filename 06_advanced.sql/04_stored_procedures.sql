@@ -9,7 +9,12 @@ CALL p_all_users();
 
 
 DELIMITER //
-CREATE PROCEDURE p_age_users(IN age int)
+CREATE PROCEDURE p_age_users(IN age_param int)
 BEGIN
-	SELECT * FROM users WHERE age = age;
+	SELECT * FROM users WHERE age = age_param;
 END //
+
+CALL p_age_users(30);
+
+DROP PROCEDURE IF EXISTS p_age_users;
+
