@@ -1,22 +1,26 @@
 import mysql.connector
 
-config = {
-    "host": "127.0.0.1",
-    "port": "3306",
-    "database": "hello_mysql",
-    "user": "root",
-    "password": "admin1234"
-    }
+def print_user(user):
 
-connection = mysql.connector.connect(**config)
-cursor = connection.cursor()
+    config = {
+        "host": "127.0.0.1",
+        "port": "3306",
+        "database": "hello_mysql",
+        "user": "root",
+        "password": "231Juan."
+        }
 
-query = "SELECT * FROM users"
-cursor.execute(query)
-results = cursor.fetchall()
+    connection = mysql.connector.connect(**config)
+    cursor = connection.cursor()
 
-for row in results:
-    print(row)
+    query = "SELECT * FROM users WHERE name ='" + user + "';"
+    cursor.execute(query)
+    results = cursor.fetchall()
 
-cursor.close()
-connection.close()
+    for row in results:
+        print(row)
+
+    cursor.close()
+    connection.close()
+
+print_user("Juan")
