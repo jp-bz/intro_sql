@@ -1,6 +1,6 @@
 SELECT * FROM users
 RIGHT JOIN dni
-ON users.user_id = dni.user_id; # El RIGHT JOIN devuelve todas las filas de la tabla de la derecha (dni) y las filas coincidentes de la tabla de la izquierda (users). Si no hay coincidencia, se mostrarán NULL en las columnas de la tabla de la izquierda.
+ON users.user_id = dni.user_id; 
 
 
 SELECT users.name, dni.dni_number FROM dni
