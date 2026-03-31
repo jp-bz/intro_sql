@@ -27,3 +27,4 @@ CASE
     ELSE 'Es menor de edad'
 END AS '¿Es mayor de edad?'
 FROM users;
+

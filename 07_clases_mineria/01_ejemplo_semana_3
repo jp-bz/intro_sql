@@ -1,0 +1,31 @@
+CREATE TABLE Clients (
+Id INT,
+FirstName VARCHAR(50),
+LastName VARCHAR(50),
+BirthDate DATE
+);
+
+ALTER TABLE Clients ADD address VARCHAR(250);
+ALTER TABLE Clients ADD PRIMARY KEY (Id);
+
+INSERT INTO Clients (Id, FirstName, LastName, BirthDate, address)
+VALUES (1, 'Jim', 'Morrison', '1943-08-12', '2100 Vernon Place');
+INSERT INTO Clients (Id, FirstName, LastName, BirthDate, address)
+VALUES (2, 'Robert', 'Plant', '1948-08-20', '12 Oval Road');
+INSERT INTO Clients (Id, FirstName, LastName, BirthDate, address)
+VALUES (3, 'Robert', 'Smith', '1959-04-21', NULL);
+INSERT INTO Clients (Id, FirstName, LastName, BirthDate, address)
+VALUES (4, 'Marlon', 'Brando', '1924-04-03', 'Nebraska');
+
+
+SELECT * FROM Clients;
+DESCRIBE Clients;
+
+UPDATE Clients SET address = 'Somewhere in the UK' WHERE Id = 3;
+
+SELECT FirstName, LastName, address FROM clients;
+
+DELETE FROM Clients WHERE Id = 4;
+
+SELECT * FROM Clients WHERE Id > 1;
+
